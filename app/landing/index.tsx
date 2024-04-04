@@ -20,9 +20,9 @@ const LandingPage: React.FC = () => {
                         </View>
                     }
                     backgroundChildren={<Image source={require('../../assets/images/school-laptop.png')} style={{ width: 800, height: 600, }} />} />
-                <View style={{ height: 569 }}></View>
+                <View style={{ height: 169 }}></View>
                 <ContentBlock title='Effortless Tracking' details='Say goodbye to cumbersome spreadsheets and manual tracking. With My CE, keeping tabs on your continuing education credits has never been easier. Our intuitive interface allows you to input your courses and certifications with just a few taps, so you can focus on what matters most – advancing your career.' />
-                <View style={{ height: 569 }}></View>
+                <View style={{ height: 169 }}></View>
                 <View style={styles.alignRight}>
                     <ContentBlock title='Secure Certificate Storage' details='No more lost or misplaced certificates! My CE offers secure digital storage for all your credentials, allowing you to access them anytime, anywhere. Impress potential employers or clients with your easily accessible professional achievements.' />
                 </View>
