@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
 import { useColorScheme } from '@/components/useColorScheme';
+import { setCustomText } from 'react-native-global-props';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -14,7 +15,7 @@ export {
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: '/',
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -23,6 +24,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Roboto: require('../assets/fonts/Roboto-Medium.ttf'),
+    Roboto_Reg: require('../assets/fonts/Roboto-Regular.ttf'),
     ...FontAwesome.font,
   });
 
@@ -46,12 +49,17 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const customTextProps = {
+    style: {
+      fontFamily: 'Roboto',
+    },
+  };
 
+  setCustomText(customTextProps);
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="/" />
       </Stack>
     </ThemeProvider>
   );
