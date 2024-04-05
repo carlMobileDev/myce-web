@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     signInButton: {
         width: 160,
         padding: 8,
-        borderRadius: 2,
+        borderRadius: 16,
         alignItems: 'center',
         backgroundColor: Colors.primary.text,
         color: 'white',

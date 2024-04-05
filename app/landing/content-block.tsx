@@ -16,8 +16,7 @@ const ContentBlock: React.FC<ContentBlockProps> = (props) => {
 const styles = StyleSheet.create({
     content: {
         flex: 1,
-        paddingTop: 240,
-        paddingHorizontal: 160
+        paddingHorizontal: 100
     },
     title: {
         fontSize: 36,
