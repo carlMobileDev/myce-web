@@ -18,7 +18,7 @@ const LandingPage: React.FC = () => {
                             <Text style={[styles.mainTitle,]}>Your Ultimate Continuing Education Companion</Text>
                             <Text style={styles.mainSubtitle}>Are you a licensed professional looking to streamline your continuing education journey? Look no further than My CE – the all-in-one mobile app designed to simplify the way you manage your continuing education credits.</Text>
                             <View style={{ height: 40 }}></View>
-                            <StoreButtonRow color='#fff' />
+                            <StoreButtonRow color='#fff' includeLinkedIn={false} />
                         </View>
                     }
                     backgroundChildren={<Image source={require('../../assets/images/school-laptop.png')} style={{ width: 800, height: 600, }} />} />
@@ -37,7 +37,7 @@ const LandingPage: React.FC = () => {
                             <Text>
                                 MyCE
                             </Text>
-                            <StoreButtonRow color='#E7ECFF' />
+                            <StoreButtonRow color='#E7ECFF' includeLinkedIn={true} />
                         </View>
                         <Text>Log In</Text>
                     </View>
