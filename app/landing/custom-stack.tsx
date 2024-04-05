@@ -8,7 +8,7 @@ interface CustomStackProps {
 
 const CustomStack: React.FC<CustomStackProps> = ({ foregroundChildren, backgroundChildren }) => {
     return (
-        <View style={{ position: 'relative', flexDirection: 'row' }}>
+        <View style={{ position: 'relative', flexDirection: 'row', alignItems: 'center' }}>
             <View>
                 {foregroundChildren}
             </View>
