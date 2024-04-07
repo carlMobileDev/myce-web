@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
-import TopMenuBar from './top-menu-bar';
-import ContentBlock from './content-block';
-import CustomStack from './custom-stack';
-import { Link } from 'expo-router';
-import StoreButtonRow from './store-button-row';
-import Footer from './footer';
+import TopMenuBar from '@/components/top-menu-bar';
+import ContentBlock from '@/components/content-block';
+import CustomStack from '@/components/custom-stack';
+import StoreButtonRow from '@/components/store-button-row';
+import Footer from '@/components/footer';
 
 
 const LandingPage: React.FC = () => {
