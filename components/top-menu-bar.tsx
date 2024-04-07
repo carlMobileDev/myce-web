@@ -1,20 +1,27 @@
 import Colors from "@/constants/Colors"
+import { Link } from "expo-router"
 import { Image, StyleSheet, Text, View } from "react-native"
 
 const TopMenuBar: React.FC = () => {
     return <View style={styles.topBar}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Image source={require('../../assets/images/logo.png')} style={{ width: 50, height: 50 }} />
+            <Image source={require('../assets/images/logo.png')} style={{ width: 50, height: 50 }} />
             <View >
                 <Text style={styles.logoText}>My CE</Text>
             </View>
         </View>
         <View style={styles.optionsRow}>
             <View>
-                <Text style={styles.pageText}>Home</Text>
+                <Link href='/landing/' children=
+                    {
+                        <Text style={styles.pageText}>Home</Text>
+                    } />
             </View>
             <View>
-                <Text style={styles.pageText}>About</Text>
+                <Link href='/terms/' children=
+                    {
+                        <Text style={styles.pageText}>About</Text>
+                    } />
             </View>
             <View>
                 <Text style={styles.pageText}>Contact</Text>

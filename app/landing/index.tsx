@@ -32,7 +32,7 @@ const LandingPage: React.FC = () => {
                         <Image source={require('../../assets/images/Cropped.png')} style={{ borderRadius: 16, width: 400, height: 600 }} />
                     } />
                 <View style={{ height: 169 }}></View>
-                <View style={styles.alignRight}>
+                <View style={styles.alignCenter}>
                     <ContentBlock title='Secure Certificate Storage' details='No more lost or misplaced certificates! My CE offers secure digital storage for all your credentials, allowing you to access them anytime, anywhere. Impress potential employers or clients with your easily accessible professional achievements.' />
                 </View>
                 <View style={{ height: 172 }}></View>
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
         paddingTop: 140,
         paddingLeft: 100
     },
-    alignRight: {
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end',
+    alignCenter: {
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
     mainTitle: {
