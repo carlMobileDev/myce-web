@@ -1,9 +1,6 @@
 import TopMenuBar from '@/components/top-menu-bar';
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
-import HTML from 'react-native-render-html';
-
-
+import {View, Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
 const LargeTextComponent: React.FC = () => {
     return (
@@ -60,21 +57,22 @@ const LargeTextComponent: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 10,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
-    text: {
-        fontSize: 16,
-        fontWeight: 'normal'
-    },
-    bold: {
-        fontWeight: 'bold',
-    },
-})
+  container: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'normal',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+});
 
 export default LargeTextComponent;
