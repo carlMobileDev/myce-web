@@ -1,42 +1,53 @@
-import {View} from '@/components/Themed';
-import {Link} from 'expo-router';
+import { Link } from 'expo-router';
+import React from 'react';
+import { View, Image, Linking, Dimensions, PixelRatio } from 'react-native';
+import { horizontalScale, verticalScale } from './Metrics';
+import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 
-interface StoreButtonRowProps {
-  color: string;
-  includeLinkedIn: boolean;
-}
+const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
 
-const StoreButtonRow: React.FC<StoreButtonRowProps> = (props) => {
+const StoreButtonRow: React.FC = () => {
   return (
-    <View
-      style={{
-        flexDirection: 'row',
-        backgroundColor: props.color,
-        alignItems: 'center',
-      }}
-    >
+    <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
       <Link
         href={
-          'https://play.google.com/store/apps/details?id=com.carlMobileDev.myceu_flutter'
+          'https://play.google.com/store/apps/details?id=com.yourapp'
         }
-      ></Link>
-      <a href="https://play.google.com/store/apps/details?id=com.carlMobileDev.myceu_flutter&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-        <img
-          alt="Get it on Google Play"
-          width={300}
-          src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-        />
-      </a>
-      <View style={{width: 30, backgroundColor: props.color}}></View>
+      >
+        <Image
+          accessibilityLabel='Get it on Google Play'
+          source={{
+            uri:
+              'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
 
-      <a href="https://apps.apple.com/us/app/my-ce/id1661831705?itsct=apps_box_badge&amp;itscg=30200">
-        <img
-          src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1675814400"
-          alt="Download on the App Store"
-          height={83}
-          width={250}
+          }}
+          style={{
+            height: heightPercentageToDP(12),
+            width: widthPercentageToDP(24),
+          }}
+          resizeMode='contain'
         />
-      </a>
+      </Link>
+      <View style={{ width: 10 }}></View>
+      <Link
+        href={
+          'https://apps.apple.com/us/app/my-ce/id1661831705?itsct=apps_box_badge&amp;itscg=30200'
+        }
+      >
+        <Image
+          accessibilityLabel='Download on the App Store'
+          source={{
+            uri:
+              'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us',
+          }}
+          style={{
+            height: heightPercentageToDP(9),
+            width: widthPercentageToDP(27),
+          }}
+          resizeMode='contain'
+        />
+      </Link>
     </View>
   );
 };

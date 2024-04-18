@@ -1,13 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import StoreButtonRow from './store-button-row';
-import {Link} from 'expo-router';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
 const Footer: React.FC = () => {
   return (
-    <View style={{padding: 60, backgroundColor: '#E7ECFF'}}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{flexDirection: 'column', alignItems: 'flex-start'}}>
+    <View style={{ padding: 60, backgroundColor: "#E7ECFF" }}>
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={{ flexDirection: "column", alignItems: "flex-start" }}>
           <Link href="/privacy/">
             <Text style={styles.linkText}>Privacy Policy</Text>
           </Link>
@@ -15,11 +14,10 @@ const Footer: React.FC = () => {
             <Text style={styles.linkText}>Terms and Conditions</Text>
           </Link>
         </View>
-
-        <View style={{flexDirection: 'column', alignItems: 'center'}}>
+        <View style={{ flexDirection: "column", alignItems: "center" }}>
           <Text style={styles.footerMainText}>MyCE</Text>
         </View>
-        <View style={{width: 150}}></View>
+        <View style={{ width: 150 }}></View>
       </View>
     </View>
   );
@@ -28,14 +26,14 @@ const Footer: React.FC = () => {
 const styles = StyleSheet.create({
   footerMainText: {
     fontSize: 26,
-    fontWeight: 'bold',
-    color: '#37447E',
+    fontWeight: "bold",
+    color: "#37447E",
     paddingBottom: 16,
   },
   linkText: {
     fontSize: 16,
-    color: '#37447E',
-    textDecorationLine: 'underline',
+    color: "#37447E",
+    textDecorationLine: "underline",
     paddingBottom: 8,
   },
 });
